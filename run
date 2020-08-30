@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+set -eu
+
+exec 2>&1
+
+COMMAND=/home/makishima/.local/bin/rclone-scripts/rcloneautomount.sh
+USER=makishima
+
+exec sudo /usr/bin/chpst -u ${USER} ${COMMAND}

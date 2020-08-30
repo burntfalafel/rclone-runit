@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+set -eu
+
+exec 2>&1
+
+COMMAND=/mnt/media
+COMMAND2=/mnt/bckup_acer_rclone
+USER=root
+
+#/bin/fusermount -u ${COMMAND}
+#exec /bin/fusermount -u ${COMMAND2}
+
+exec /usr/bin/umount -f ${COMMAND} 
+#exec /usr/bin/umount -f ${COMMAND2}
